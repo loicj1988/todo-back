@@ -1,0 +1,6 @@
+quarkus:
+  http:
+    cors: true
+    
+greeting:
+  message: "hello"
