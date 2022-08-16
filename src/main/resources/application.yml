@@ -1,21 +1,14 @@
 quarkus:
-  oidc:
-    client-id: ${TODO_BACKEND_CLIENTID:xP2E7TJYaKQmh5EyFPYCmtGuIC3Drbez}
-    authentication:
-      scopes: openid,profile,email
-    auth-server-url: ${AUTHSERVER:https://your.auth0.domain}
-    credentials:
-      secret: ${AUTH0SECRET}
-    application-type: web_app
+  # oidc:
+  #   client-id: ${CLIENTID:UoBBOjKU3rYy3nFu6JRCRhtLSIELnona}
+  #   auth-server-url: ${AUTHSERVER:https://dev-xtuoussz.jp.auth0.com/}
+  #   application-type: SERVICE
   http:
     port: ${TODO_BACKEND_PORT:8080}
     cors: true
-    auth:
-      permission:
-        authenticated:
-          paths: /*
-          policy: authenticated
+  mongodb: 
+    connection-string: ${TODO_MONGO_URL:mongodb://localhost:27017}
+    database: todo
 
-    
 greeting:
   message: "hello"
